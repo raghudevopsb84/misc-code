@@ -11,3 +11,9 @@ resource "azurerm_storage_account" "example" {
   account_replication_type = "GRS"
 }
 
+resource "azurerm_storage_container" "tfstates" {
+  name                  = "roboshop-state-files"
+  storage_account_id    = azurerm_storage_account.example.id
+  container_access_type = "private"
+}
+
