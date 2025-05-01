@@ -54,7 +54,7 @@ resource "azurerm_virtual_machine" "vm" {
 }
 
 resource "azurerm_dns_a_record" "public_dns_record" {
-  name                = "${var.name}-dev"
+  name                = var.name
   zone_name           = "rdevopsb84.online"
   resource_group_name = var.rg_name
   ttl                 = 3
@@ -63,7 +63,7 @@ resource "azurerm_dns_a_record" "public_dns_record" {
 
 
 resource "azurerm_dns_a_record" "private_dns_record" {
-  name                = "${var.name}-dev"
+  name                = "${var.name}-int"
   zone_name           = "rdevopsb84.online"
   resource_group_name = var.rg_name
   ttl                 = 3
