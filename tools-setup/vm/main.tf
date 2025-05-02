@@ -58,13 +58,14 @@ resource "azurerm_network_interface_security_group_association" "nsg-attach" {
 
 
 resource "azurerm_linux_virtual_machine" "vm" {
-  name                  = var.name
-  location              = var.rg_location
-  resource_group_name   = var.rg_name
-  size                  = var.vm_size
-  admin_username        = "azuser"
-  admin_password        = "DevOps@123456"
-  network_interface_ids = [azurerm_network_interface.privateip.id]
+  name                            = var.name
+  location                        = var.rg_location
+  resource_group_name             = var.rg_name
+  size                            = var.vm_size
+  admin_username                  = "azuser"
+  admin_password                  = "DevOps@123456"
+  disable_password_authentication = false
+  network_interface_ids           = [azurerm_network_interface.privateip.id]
 
   os_disk {
     name                 = "${var.name}-disk"
