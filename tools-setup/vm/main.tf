@@ -100,6 +100,3 @@ resource "azurerm_dns_a_record" "private_dns_record" {
   records             = [azurerm_network_interface.privateip.private_ip_address]
 }
 
-output "ip" {
-  value = azurerm_public_ip.publicip
-}

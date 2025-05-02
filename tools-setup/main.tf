@@ -7,6 +7,3 @@ module "tools-vm" {
   vm_size     = each.value["vm_size"]
 }
 
-output "ip" {
-  value = module.tools-vm
-}
