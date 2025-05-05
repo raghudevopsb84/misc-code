@@ -51,12 +51,12 @@ variable "values" {
       secret = "roboshop-dev"
       value = {
         CART_HOST = "cart-dev.rdevopsb84.online"
-        CART_PORT = 8080
+        CART_PORT = "8080"
         USER_HOST = "user-dev.rdevopsb84.online"
-        USER_PORT = 8080
+        USER_PORT = "8080"
         AMQP_HOST = "rabbitmq-dev.rdevopsb84.online"
-        AMQP_USER = roboshop
-        AMQP_PASS = roboshop123
+        AMQP_USER = "roboshop"
+        AMQP_PASS = "roboshop123"
       }
     }
 
