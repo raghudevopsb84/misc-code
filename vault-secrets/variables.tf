@@ -7,3 +7,15 @@ variable "secrets" {
     }
   }
 }
+
+variable "values" {
+  default = {
+    cart = {
+      secret = "roboshop-dev"
+      value = {
+        zip = "zap",
+        foo = "bar"
+      }
+    }
+  }
+}
