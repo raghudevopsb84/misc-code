@@ -3,7 +3,10 @@ variable "token" {}
 variable "secrets" {
   default = {
     roboshop-dev = {
-      description = "RoboShop App Component All secrets"
+      description = "RobeShop App Component All secrets"
+    }
+    roboshop-infra = {
+      description = "Roboshop Infra related secrets"
     }
   }
 }
@@ -17,5 +20,13 @@ variable "values" {
         foo = "bar"
       }
     }
+    ssh = {
+      secret = "roboshop-infra"
+      value = {
+        username = "azuser"
+        password = "DevOps@123456"
+      }
+    }
   }
 }
+
