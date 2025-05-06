@@ -44,6 +44,8 @@ variable "values" {
       value = {
         CART_ENDPOINT = "cart-dev.rdevopsb84.online:8080"
         DB_HOST       = "mysql-dev.rdevopsb84.online"
+        username      = "root"
+        password      = "RoboShop@1"
       }
     }
 
