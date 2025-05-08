@@ -73,11 +73,23 @@ variable "values" {
     frontend = {
       secret = "roboshop-dev"
       value = {
-        catalogue_url = "http://catalogue-dev.rdevopsb84.online:8080/"
-        user_url      = "http://user-dev.rdevopsb84.online:8080/"
-        cart_url      = "http://cart-dev.rdevopsb84.online:8080/"
-        payment_url   = "http://payment-dev.rdevopsb84.online:8080/"
-        shipping_url  = "http://shipping-dev.rdevopsb84.online:8080/"
+        catalogue_url  = "http://catalogue-dev.rdevopsb84.online:8080/"
+        user_url       = "http://user-dev.rdevopsb84.online:8080/"
+        cart_url       = "http://cart-dev.rdevopsb84.online:8080/"
+        payment_url    = "http://payment-dev.rdevopsb84.online:8080/"
+        shipping_url   = "http://shipping-dev.rdevopsb84.online:8080/"
+        CATALOGUE_HOST = "catalogue-dev.rdevopsb84.online"
+        CATALOGUE_PORT = 8080
+        USER_HOST      = "user-dev.rdevopsb84.online"
+        USER_PORT      = 8080
+        CART_HOST      = "cart-dev.rdevopsb84.online"
+        CART_PORT      = 8080
+        SHIPPING_HOST  = "shipping-dev.rdevopsb84.online"
+        SHIPPING_PORT  = 8080
+        PAYMENT_HOST   = "payment-dev.rdevopsb84.online"
+        PAYMENT_PORT   = 8080
+
+
       }
     }
 
