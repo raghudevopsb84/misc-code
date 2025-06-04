@@ -5,5 +5,7 @@ module "tools-vm" {
   rg_name     = var.rg_name
   name        = each.key
   vm_size     = each.value["vm_size"]
+  spot        = each.value["spot"]
 }
+
 
