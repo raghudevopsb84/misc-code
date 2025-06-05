@@ -25,6 +25,7 @@
     pull: always
     state: started
     restart: true
+    restart_policy: always
     env:
       ORG: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-infra/data/github-runner:ORG token={{ token }} url=http://vault-int.rdevopsb84.online:8200') }}"
       TOKEN: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-infra/data/github-runner:TOKEN token={{ token }} url=http://vault-int.rdevopsb84.online:8200') }}"
