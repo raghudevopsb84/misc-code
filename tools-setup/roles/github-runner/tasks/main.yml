@@ -36,4 +36,8 @@
       ORG: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-infra/data/github-runner:ORG token={{ token }} url=http://vault-int.rdevopsb84.online:8200') }}"
       TOKEN: "{{ gh_org_token.stdout }}"
       NAME: "{{ item }}"
+      ARM_CLIENT_ID:  "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-infra/data/azure-sp:ARM_CLIENT_ID token={{ token }} url=http://vault-int.rdevopsb84.online:8200') }}"
+      ARM_CLIENT_SECRET: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-infra/data/azure-sp:ARM_CLIENT_SECRET token={{ token }} url=http://vault-int.rdevopsb84.online:8200') }}"
+      ARM_TENANT_ID: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-infra/data/azure-sp:ARM_TENANT_ID token={{ token }} url=http://vault-int.rdevopsb84.online:8200') }}"
+
 
