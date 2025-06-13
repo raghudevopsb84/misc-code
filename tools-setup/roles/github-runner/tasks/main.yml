@@ -30,6 +30,8 @@
     image: rkalluru/d84-github-runner
     pull: always
     state: started
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     restart: true
     restart_policy: always
     env:
