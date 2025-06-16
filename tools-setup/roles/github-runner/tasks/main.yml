@@ -8,14 +8,17 @@
     name: docker-ce
     state: installed
 
+- name: Copy service file
+  ansible.builtin.template:
+    src: docker.service
+    dest: /etc/systemd/system/multi-user.target.wants/docker.service
+
 - name: Start Docker
   ansible.builtin.systemd_service:
     name: docker
-    state: started
+    state: restarted
     enabled: yes
-
-- name: Set Permissions
-  ansible.builtin.shell: chmod o+rw /var/run/docker.sock
+    daemon-reload: yes
 
 - name: Get Runner Token
   ansible.builtin.shell: |
