@@ -8,10 +8,10 @@ variable "tools" {
       vm_size = "Standard_DS1_v2"
       spot    = false
     }
-    elk-stack = {
-      vm_size = "Standard_E2bds_v5"
-      spot    = true
-    }
+#     elk-stack = {
+#       vm_size = "Standard_E2bds_v5"
+#       spot    = true
+#     }
   }
 }
 
