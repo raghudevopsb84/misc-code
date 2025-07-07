@@ -6,6 +6,7 @@ module "tools-vm" {
   name        = each.key
   vm_size     = each.value["vm_size"]
   spot        = each.value["spot"]
+  disk_size_gb = try(each.value["disk_size_gb"], 30)
 }
 
 

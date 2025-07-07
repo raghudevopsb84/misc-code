@@ -72,6 +72,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
     name                 = "${var.name}-disk"
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
+    disk_size_gb         = var.disk_size_gb
   }
 
   source_image_id = "/subscriptions/323379f3-3beb-4865-821e-0fff68e4d4ca/resourceGroups/project-setup-1/providers/Microsoft.Compute/images/local-devops-practice"
@@ -98,6 +99,7 @@ resource "azurerm_linux_virtual_machine" "nonspot" {
     name                 = "${var.name}-disk"
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
+    disk_size_gb         = var.disk_size_gb
   }
 
   source_image_id = "/subscriptions/323379f3-3beb-4865-821e-0fff68e4d4ca/resourceGroups/project-setup-1/providers/Microsoft.Compute/images/local-devops-practice"
