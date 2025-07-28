@@ -13,6 +13,10 @@ variable "tools" {
       vm_size = "Standard_E2bds_v5"
       spot    = true
     }
+    sonarqube = {
+      vm_size = "Standard_DS2_v2"
+      spot    = true
+    }
   }
 }
 
